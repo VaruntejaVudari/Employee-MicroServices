@@ -28,7 +28,7 @@ public class EmployeeController {
 		Employee employee = this.employeeService.getEmployee(eid);
 		
 		//http://localhost:9090/record/emp/3446\
-		List records = this.restTemplate.getForObject("http://localhost:9090/record/emp/3446" + eid,List.class);
+		List records = this.restTemplate.getForObject("http:RECORD-SERVICE/record/emp/3446" + eid,List.class);
 		employee.setRecords(records);
 		return employee;
 		
